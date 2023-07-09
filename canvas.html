@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>DrawBoard</title>
+    <link rel="stylesheet" href="/css/canvastyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- tools-board -->
+        <section class="tools-board">
+            <!-- shapes -->
+            <div class="row">
+                <label class="title">Shapes</label>
+                <ul class="options flex">
+                    <!-- <span>Line</span> -->
+                    <li class="option tool" id="line">
+                        <svg height="24" width="24">
+                            <line x1="1" y1="19" x2="23" y2="1" style="stroke:rgb(0,0,0);stroke-width:1.5" />
+                        </svg>
+                    </li>
+                    <li class="option tool" id="rectangle">
+                        <svg width="25" height="18">
+                            <rect width="25" height="18" style="fill:rgb(255, 255, 255);stroke-width:3;stroke:rgb(0,0,0)" />
+                        </svg> 
+                        <!-- <span>Rectangle</span> -->
+                    </li>
+                    <li class="option tool" id="circle">
+                        <svg height="40" width="24">
+                            <circle cx="12" cy="18" r="10" stroke="black" stroke-width="1.5" fill="white" />
+                        </svg> 
+                        <!-- <span>Circle</span> -->
+                    </li>
+                    <li class="option tool" id="triangle">
+                        <svg height="20" width="24">
+                            <polygon points="15,1 15,15 1,15" style="fill:rgb(255, 255, 255);stroke:rgb(0, 0, 0);stroke-width:1.2" />
+                        </svg> 
+                        <!-- <span>Triangle</span> -->
+                    </li>
+                </ul>
+                <ul class="options newmargin">
+                    <li class="option newmargin">
+                        <input type="checkbox" id="fill-color">
+                        <label for="fill-color" class="fill">Fill color</label>
+                    </li>
+                </ul>
+            </div>
+            <!-- options -->
+            <div class="row">
+                <label class="title">Options</label>
+                <ul class="options flex">
+                    <li class="option active tool" id="brush">
+                        <span>Brush</span>
+                    </li>
+                    <li class="option tool" id="eraser">
+                        <span>Eraser</span>
+                    </li>
+                </ul>
+                <ul class="options newmargin">
+                    <li class="option newmargin">
+                        <input type="range" id="size-slider" min="1" max="30" value="5">
+                    </li>
+                </ul>
+                <div class="row colors">
+                    <ul class="options">
+                        <li class="option"></li>
+                        <li class="option selected"></li>
+                        <li class="option"></li>
+                        <li class="option"></li>
+                        <li class="option">
+                            <input type="color" id="color-picker" value="#4A98F7">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- text -->
+            <div class="row">
+                <label class="title">Text</label>
+                <div class="flexnew">
+                    <div>
+                        <label for="font-size-input"><!--Font Size:--></label>
+                        <input type="number" id="font-size-input" value="14">
+                    </div>
+                    <div>
+                        <label for="font-style-input"><!--Font Style:--></label>
+                        <select id="font-style-input">
+                            <option value="select">Font Style</option>
+                            <option value="sans-serif">Sans-serif</option>
+                            <option value="serif">Serif</option>
+                            <option value="monospace">Monospace</option>
+                            <option value="cursive">Cursive</option>
+                            <option value="fantasy">Fantasy</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="color" id="font-color-input" value="#000000">
+                    </div>
+                </div>
+                <div class="row text-input buttons rowflex">
+                    <input type="text" id="text-input" placeholder="Enter text">
+                    <a id="textBtn"><img class="fileup" src="/images/icons/enter.png"></a>
+                </div>
+            </div>
+            <!-- image -->
+            <div class="row image-upload">
+                <label for="image-upload">Upload Image</label>
+                <input type="file" id="image-upload" accept="image/*" placeholder="upload">
+                <div class="rowflex">
+                    <div class="colflex">
+                        <!-- <label for="image-width">Image Width:</label> -->
+                        <input type="number" id="image-width" min="1" step="1" placeholder=" Width">
+                        <!-- <label for="image-height">Image Height:</label> -->
+                        <input type="number" id="image-height" min="1" step="1" placeholder=" Height">
+                    </div>
+                    <div>
+                        <a id="load-image-btn"><img class="uploadimg" src="/images/icons/enter.png"></a>
+                    </div>
+                </div>
+            </div>
+            <!-- other buttons -->
+            <div class="row buttons">
+                <button class="clear-canvas">Clear Canvas</button>
+                <div class="urssflex">
+                    <button id="undoBtn" onclick="undo()">Undo</button>
+                    <button id="redoBtn" onclick="redo()">Redo</button>
+                </div>
+                <div class="urssflex">
+                    <button class="save-img ss">Save</button>
+                    <button class="save-img ss" id="shareBtn">Share</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- drawing-board -->
+        <section class="drawing-board">
+            <canvas></canvas>
+        </section>
+    </div>
+</body>
+</html> 

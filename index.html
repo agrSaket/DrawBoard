@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="/images/Web/icons8-whiteboard-flaticons-lineal-color-16.png" type="image/x-icon">
+
+  <!--=============== REMIX ICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="/css/style.css">
+  <title>DrawBoard</title>
+</head>
+<body>
+  <!--==================== HEADER ====================-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">
+        <img src="/images/Web/icons8-whiteboard-flaticons-lineal-color-32.png" alt="logo"> DrawBoard
+      </a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link active-link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact Us</a>
+          </li>
+          <li class="nav__item">
+            <a href="#signin" class="nav__link">Log in</a>
+          </li>
+        </ul>
+
+        <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+        </div>
+      </div>
+      <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!--==================== HOME ====================-->
+    <section class="home" id="home">
+      <div class="home__container container grid">
+        <img style="width:95%;" src="/images/home.png" alt="" class="home__img">
+        <div class="home__data">
+          <h1 class="home__title">Drawing Boundaries, Erasing Limits</h1>
+          <p class="home__description">
+            Where creativity knows no bounds.<br>
+            Unleash your creativity and bring your ideas to life. Sketch, annotate, and brainstorm effortlessly
+          </p>
+          <a href="/canvas.html" class="button button--flex">
+            Get Started <img style="width: 30px;" src="/images/inkwell.png" alt="plant">
+          </a>
+        </div>
+
+        <div class="home__social">
+          <span class="home__social-follow">Follow Us</span>
+          <div class="home__social-links">
+            <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank" class="home__social-link">
+              <i class="ri-twitter-fill"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section container" id="about">
+                <div class="about__container grid">
+                    <img style="width: 150%;" src="/images/asset 18.png" alt="" class="about__img">
+                    <div class="about__data">
+                        <h2 class="section__title about__title">
+                            Why choose Us<p style="font-size: 20px ; font-weight: 50;"></p>
+                        </h2>
+                        <p class="about__description">
+                          Welcome to our whiteboard website<br>
+                          DrawBoard offers a tactile and immersive experience for 
+                          unleashing your creativity. With pen in hand and a blank canvas, you can explore the freedom of 
+                          expression, ideation, and problem-solving.<br><br>
+                          Embrace the tangible connection as you draw, write, and erase 
+                          effortlessly. Experience the joy of visual thinking, sketching 
+                          mind maps, illustrating concepts, and collaborating with others. 
+                          Unleash your imagination and let the physicality of the whiteboard 
+                          enhance your creative process.
+                        </p>
+                        <a href="/canvas.html" class="button--link button--flex">
+                          <img style="width: 35px;" src="/images/inkwell.png" alt="inkwell">Get Started 
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== STEPS ====================-->
+            <section class="steps section container">
+              <div class="steps__bg">
+                <h2 class="section__title-center steps__title">
+                  Steps to start your <br> creative journey
+                </h2>
+
+                <div class="steps__container grid">
+                  <div class="steps__card">
+                    <div class="steps__card-number"><img src="/images/creation.png"></div>
+                    <h3 class="steps__card-title">Imagine</h3>
+                    <p class="steps__card-description">
+                      Let your imagination go wild.
+                    </p>
+                  </div>
+
+                  <div class="steps__card">
+                    <div class="steps__card-number"><img src="/images/paint.png"></div>
+                    <h3 class="steps__card-title">Draw</h3>
+                    <p class="steps__card-description">
+                      Let us help you to draw !
+                    </p>
+                  </div>
+
+                  <div class="steps__card">
+                    <div class="steps__card-number"> <img src="/images/share.png"></div>
+                    <h3 class="steps__card-title">Show your work to world</h3>
+                    <p class="steps__card-description">
+                      Let your creativeness rock!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!--==================== CONTACT ====================-->
+            <section class="contact section container" id="contact">                
+                <div class="contact__container grid">
+                    <div class="contact__box">
+                        <h2 class="section__title">
+                            Contact Us
+                        </h2>
+
+                        <div class="contact__data">
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Call us for instant support</h3>
+                                <span class="contact__description">
+                                    <i class="ri-phone-line contact__icon"></i>
+                                    +91-123456789
+                                </span>
+                            </div>
+
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Write us by mail</h3>
+                                <span class="contact__description">
+                                    <i class="ri-mail-line contact__icon"></i>
+                                    <a href="#" style="color:black;">drawboard@gmail.com</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="contactForm" onsubmit="submitForm(event)" action="" class="contact__form">
+                        <div class="contact__inputs">
+                            <div class="contact__content">
+                              <label for="name" class="contact__label"></label><br>
+                              <input type="text" id="name" placeholder="Name" class="contact__input" required><br>
+                              <span id="nameError" class="error"></span><br>
+                            </div>
+
+                            <div class="contact__content">
+                              <label for="email" class="contact__label"></label><br>
+                              <input type="email" id="email" name="email" placeholder="Email" class="contact__input" required><br>
+                              <span id="emailError" class="error"></span><br>
+                            </div>
+
+                            <div class="contact__content contact__area">
+                              <label for="message" class="contact__label"></label><br>
+                              <textarea id="message" name="message" rows="5" placeholder="Message" class="contact__input" required></textarea><br>         
+                              <span id="messageError" class="error"></span><br>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex">
+                            Send Message
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </form>
+                    <!-- <div id="successMessage" class="success" style="display: none;">Message sent successfully!</div> -->
+                </div>
+            </section>
+        </main>
+
+  <!--==================== FOOTER ====================-->
+  <footer class="footer section">
+    <div class="footer__container container grid">
+        <div class="footer__content">
+          <a href="#" class="footer__logo">
+            <img src="/images/Web/icons8-whiteboard-flaticons-lineal-color-32.png"> DrawBoard
+          </a>
+
+          <h3 class="footer__title">Subscribe to our newsletter</h3>
+          <div class="footer__subscribe">
+            <form id="subscriptionForm" onsubmit="submitForm(event)">
+              <label for="email"></label>
+              <input type="email" id="email" required placeholder="Enter your email" class="footer__input"><br>
+              <span id="emailError" class="error"></span><br>
+              <!-- <input type="submit" value="Subscribe" class="button button--flex footer__button"> -->
+              <button class="button button--flex footer__button">
+                Subscribe
+                <i class="ri-arrow-right-up-line button__icon"></i>
+              </button>
+            </form>
+            <div id="successMessage" class="success" style="display: none;">Subscribed successfully!</div>
+          </div>
+
+        </div>
+
+        <div></div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">Our Address</h3>
+            <ul class="footer__data">
+                <li class="footer__information">Sector 12</li>
+                <li class="footer__information">ABCD Colony</li>
+                <li class="footer__information">XYZ City - 43210</li>
+                <li class="footer__information">India</li>
+            </ul>
+        </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">Contact Us</h3>
+        <ul class="footer__data">
+          <li class="footer__information">+91-123456789</li>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/" class="footer__social-link">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="https://www.instagram.com/" class="footer__social-link">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="https://twitter.com/" class="footer__social-link">
+              <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="https://linkedin.com/" class="footer__social-link">
+              <i class="ri-linkedin-fill"></i>
+            </a>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__copy">&#169; DrawBoard. All rigths reserved</p>
+  </footer>
+        
+  <!--=============== SCROLL UP ===============-->
+  <a href="#" class="scrollup" id="scroll-up"> 
+    <i class="ri-arrow-up-fill scrollup__icon"></i>
+  </a>
+
+  <!--=============== SCROLL REVEAL ===============-->
+  <script src="sscrollreveal.min.js"></script>
+        
+  <!--=============== MAIN JS ===============-->
+  <script src="/index.js"></script>
+  <script src="/subscribe.js"></script>
+</body>
+</html>

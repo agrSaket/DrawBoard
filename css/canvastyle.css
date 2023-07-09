@@ -1,0 +1,257 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: hsl(152, 33%, 32%);
+}
+.container{
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
+  max-width: 1335px;
+  max-height: 720px;
+}
+section{
+  background: #fff;
+  border-radius: 7px;
+}
+.tools-board{
+  width: 210px;
+  padding: 15px 22px 0;
+}
+.tools-board .row{
+  margin-bottom: 20px;
+}
+.row .options{
+  list-style: none;
+  margin: 10px 0 0 5px;
+}
+.row .options .option{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.option:is(:hover, .active) img{
+  filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+.option :where(span, label){
+  color: #454242;
+  cursor: pointer;
+  padding-left: 10px;
+}
+.option:is(:hover, .active) :where(span, label){
+  color: hsl(152, 24%, 21%);
+}
+.option #fill-color{
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+}
+#fill-color:checked ~ label{
+  color: hsl(152, 24%, 28%);
+}
+.fill{
+  color: #070707;
+}
+.option #size-slider{
+  width: 100%;
+  height: 5px;
+  margin-top: 10px;
+}
+.colors .options{
+  display: flex;
+  justify-content: space-between;
+}
+.colors .option{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-top: 3px;
+  position: relative;
+}
+.colors .option:nth-child(1){
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+}
+.colors .option:nth-child(2){
+  background-color: #000;
+}
+.colors .option:nth-child(3){
+  background-color: #E02020;
+}
+.colors .option:nth-child(4){
+  background-color: #6DD400;
+}
+.colors .option:nth-child(5){
+  background-color: #4A98F7;
+}
+.colors .option.selected::before{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 12px;
+  width: 12px;
+  background: inherit;
+  border-radius: inherit;
+  border: 2px solid #fff;
+  transform: translate(-50%, -50%);
+}
+.colors .option:first-child.selected::before{
+  border-color: #ccc;
+}
+.option #color-picker{
+  opacity: 0;
+  cursor: pointer;
+}
+.buttons button{
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 7px 0;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  background: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.buttons .clear-canvas, #undoBtn, #redoBtn{
+  color: #070707;
+  border: 1px solid #202020;
+  transition: all 0.3s ease;
+}
+.clear-canvas{
+  margin-top: 0px;
+}
+.clear-canvas:hover{
+  color: #fff;
+  background: hsl(152, 24%, 28%);
+}
+#undoBtn:hover, #redoBtn:hover{
+  color: #fff;
+  background: hsl(152, 24%, 28%);
+}
+.buttons .save-img{
+  /* background: #4A98F7; */
+  background : hsl(152, 25%, 32%);
+  /* border: 1px solid hsl(152, 24%, 32%); */
+}
+.save-img:hover{
+  background-color: hsl(152, 24%, 28%);
+}
+.drawing-board{
+  flex: 1;
+  overflow: hidden;
+}
+.drawing-board canvas{
+  width: 100%;
+  height: 100%;
+}
+.flex{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+.flexnew{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+#font-size-input{
+  max-width: 30px;
+}
+#font-style-input{
+  width: 90px;
+}
+#font-color-input{
+  height: 20px;
+  width: 30px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 5px;
+  cursor: pointer;
+}
+.newmargin{
+  margin-top: -10px;
+}
+#image-width{
+  margin-top: 8px;
+  margin-bottom: 5px;
+  width: 90px;
+  border-radius: 10%;
+  border: 1px solid #6C757D;
+}
+#image-height{
+  margin-bottom: 8px;
+  width: 90px;
+  border-radius: 10%;
+  border: 1px solid #6C757D;
+}
+.uploadimg, #load-image-btn{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.colflex{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+.rowflex{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+#textBtn, #text-input{
+  margin-top: 10px;
+}
+.fileup, #textBtn{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+#font-size-input, #font-style-input, #font-color-input{
+  height: 20px;
+  align-items:flex-start;
+  justify-content: space-between;
+}
+#text-input{
+  width: 120px;
+  height: 30px;
+  margin-top: 5px;
+}
+#textBtn{
+  margin-top: 4px;
+}
+#font-style-input{
+  margin-top: 5px;
+}
+#font-size-input{
+  margin-top: 4px;
+}
+.urssflex{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+#brush:hover, #eraser:hover{
+  border: 1px solid hsl(152, 24%, 28%);
+  color: rgb(255, 255, 255);
+  padding-right: 10px;
+}
